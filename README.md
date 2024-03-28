@@ -1,14 +1,16 @@
-# Variety Food Truck Ordering System
+![alt text](header.webp)
+
+# Food Truck Ordering System
 
 ## Contents
 
-[Introduction](https://github.com/bychok/python-challenge-1?tab=readme-ov-file#introduction)
-[Features](https://github.com/bychok/python-challenge-1?tab=readme-ov-file#features)
-[How It Works](https://github.com/bychok/python-challenge-1?tab=readme-ov-file#how-it-works)
-[Technology](https://github.com/bychok/python-challenge-1?tab=readme-ov-file#technology)
-[Setup & Execution](https://github.com/bychok/python-challenge-1?tab=readme-ov-file#setup-and-execution)
-[Conclusion](https://github.com/bychok/python-challenge-1?tab=readme-ov-file#conclusion)
-[Future Improvements](https://github.com/bychok/python-challenge-1?tab=readme-ov-file#future-improvements)
+- [Introduction](https://github.com/bychok/python-challenge-1?tab=readme-ov-file#introduction)
+- [Features](https://github.com/bychok/python-challenge-1?tab=readme-ov-file#features)
+- [How It Works](https://github.com/bychok/python-challenge-1?tab=readme-ov-file#how-it-works)
+- [Technology](https://github.com/bychok/python-challenge-1?tab=readme-ov-file#technology)
+- [Setup & Execution](https://github.com/bychok/python-challenge-1?tab=readme-ov-file#setup-and-execution)
+- [Conclusion](https://github.com/bychok/python-challenge-1?tab=readme-ov-file#conclusion)
+- [Future Improvements](https://github.com/bychok/python-challenge-1?tab=readme-ov-file#future-improvements)
 
 ## Introduction
 
@@ -27,6 +29,8 @@ The system prompts the user to choose from various menu categories. Once a categ
 ### Menu Dictionary
 
 The menu is structured as a nested dictionary, with top-level keys representing categories and second-level keys representing item names. Prices are listed as values, with further nested dictionaries used for items offering additional options.
+
+![alt text](order.webp)
 
 ### Order Process
 
