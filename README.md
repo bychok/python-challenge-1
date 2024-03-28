@@ -1,5 +1,15 @@
 # Variety Food Truck Ordering System
 
+## Contents
+
+[Introduction](https://github.com/bychok/python-challenge-1?tab=readme-ov-file#introduction)
+[Features](https://github.com/bychok/python-challenge-1?tab=readme-ov-file#features)
+[How It Works](https://github.com/bychok/python-challenge-1?tab=readme-ov-file#how-it-works)
+[Technology](https://github.com/bychok/python-challenge-1?tab=readme-ov-file#technology)
+[Setup & Execution](https://github.com/bychok/python-challenge-1?tab=readme-ov-file#setup-and-execution)
+[Conclusion](https://github.com/bychok/python-challenge-1?tab=readme-ov-file#conclusion)
+[Future Improvements](https://github.com/bychok/python-challenge-1?tab=readme-ov-file#future-improvements)
+
 ## Introduction
 
 This project is an interactive ordering system for a variety food truck, designed to provide a seamless ordering experience for customers. Utilizing Python, this script allows customers to view a menu, select items, specify quantities, and view a final order summary including the total price.
@@ -32,15 +42,11 @@ The menu is structured as a nested dictionary, with top-level keys representing 
 - **Data Structures**: Lists, Dictionaries
 - **Control Structures**: Loops, Conditional Statements, Match-Case Statements
 
-## Setup and Execution
+## Setup & Execution
 
 1. Clone the repository to your local machine.
 2. Navigate to the directory containing the `menu.py` file.
 3. Run the script using a Python interpreter (Python 3.x is recommended).
-
-## Project Structure
-
-- `menu.py`: Main Python script for the ordering system.
 
 ## Conclusion
 
