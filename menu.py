@@ -80,14 +80,17 @@ while place_order:
         i += 1
 
     # Get the customer's input
-    menu_category = input("Type menu number: ")
+    menu_selection = input("Type menu number: ")
 
     # Check if the customer's input is a number
-    if menu_category.isdigit():
+    if menu_selection.isdigit():
         # Check if the customer's input is a valid option
-        if int(menu_category) in menu_items.keys():
+        if int(menu_selection) not in menu_items.keys():
+            print("Invalid menu item number.")
+        else:
+        #if int(menu_selection) in menu_items.keys():
             # Save the menu category name to a variable
-            menu_category_name = menu_items[int(menu_category)]
+            menu_category_name = menu_items[int(menu_selection)]
             # Print out the menu category name they selected
             print(f"You selected {menu_category_name}")
 
@@ -95,18 +98,27 @@ while place_order:
             print(f"What {menu_category_name} item would you like to order?")
             i = 1
             menu_items = {}
-            print("Item # | Item name                | Price")
-            print("-------|--------------------------|-------")
+            print("Item # | Item name               | Price")
+            print("-------|-------------------------|-------")
 
             for key, value in menu[menu_category_name].items():
-                num_item_spaces = 24 - len(key)
-                item_spaces = " " * num_item_spaces
-                print(f"{i}      | {key}{item_spaces} | ${value}")
-                menu_items[i] = {
-                    "Item name": key,
-                    "Price": value
-                }
-                i += 1
+                # Check if the value is a dictionary (for items with options)
+                if isinstance(value, dict):
+                    for sub_key, sub_value in value.items():
+                        print(f"{i}      | {key} - {sub_key}{' ' * (24 - len(key) - len(sub_key) - 3)}| ${sub_value}")
+                        menu_items[i] = {
+                            "Item name": f"{key} - {sub_key}",
+                            "Price": sub_value
+                        }
+                        i += 1
+                else:
+                    print(f"{i}      | {key}{' ' * (24 - len(key))}| ${value}")
+                    menu_items[i] = {
+                        "Item name": key,
+                        "Price": value
+                    }
+                    i += 1
+
 
             # 2. Ask customer to input menu item number
             item_number = input("Please enter the item number you wish to order: ")
@@ -165,8 +177,8 @@ while place_order:
 # Print out the customer's order
 print("This is what we are preparing for you.\n")
 
-print("Item name                 | Price  | Quantity")
-print("--------------------------|--------|----------")
+print("Item name                  | Price  | Quantity")
+print("---------------------------|--------|----------")
 
 # 6. Loop through the items in the customer's order
 for order_item in order_list:
@@ -191,4 +203,3 @@ total_cost = sum(item["Price"] * item["Quantity"] for item in order_list)
 
 # And print the total prices.
 print("\nTotal cost: $" + "{:.2f}".format(total_cost))
-1
