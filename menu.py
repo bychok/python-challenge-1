@@ -88,7 +88,6 @@ while place_order:
         if int(menu_selection) not in menu_items.keys():
             print("Invalid menu item number.")
         else:
-        #if int(menu_selection) in menu_items.keys():
             # Save the menu category name to a variable
             menu_category_name = menu_items[int(menu_selection)]
             # Print out the menu category name they selected
@@ -177,8 +176,8 @@ while place_order:
 # Print out the customer's order
 print("This is what we are preparing for you.\n")
 
-print("Item name                  | Price  | Quantity")
-print("---------------------------|--------|----------")
+print("Item name                  |  Price  | Quantity")
+print("---------------------------|---------|----------")
 
 # 6. Loop through the items in the customer's order
 for order_item in order_list:
