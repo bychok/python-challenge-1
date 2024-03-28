@@ -97,6 +97,7 @@ while place_order:
             menu_items = {}
             print("Item # | Item name                | Price")
             print("-------|--------------------------|-------")
+
             for key, value in menu[menu_category_name].items():
                 num_item_spaces = 24 - len(key)
                 item_spaces = " " * num_item_spaces
@@ -150,15 +151,16 @@ while place_order:
     while True:
         keep_ordering = input("Would you like to keep ordering? (Y)es or (N)o ").lower()
 
-        # 5. Check the customer's input
-        if keep_ordering == "y":
-            break
-        elif keep_ordering == "n":
-            place_order = False
-            print("Thank you for your order.")
-            break
-        else:
-            print("Please enter 'Y' for yes or 'N' for no.")
+        match keep_ordering:
+            case "y":
+                break
+            case "n":
+                place_order = False
+                print("Thank you for your order.")
+                break
+            case _:
+                print("Please enter 'Y' for yes or 'N' for no.")
+
 
 # Print out the customer's order
 print("This is what we are preparing for you.\n")
